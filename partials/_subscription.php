@@ -73,7 +73,7 @@ if(isset($_POST['user_subs'])){
                         <input type="reset" value="RESET" class="reset-btn" style="background:pink">
                     </div>
                     <?php if($isSubmit == true){
-                        echo "<div> <p id='dis_collab_mess' style='color: lightgreen; font-size:17px; text-align: center;'>Your response has been submitted!<br>Thanks!</p></div>";
+                        echo "<div> <p id='dis_collab_mess' style='color: lightgreen; font-size:17px; text-align: center;'>Your response has been recorded!<br>Thanks!</p></div>";
                     }?>
                 </div>
             </form>

@@ -8,15 +8,34 @@
     <title>Hiranmay's web</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="content-style.css">
-    <link rel="icon" href="../Images/Logoes/h.png" />
+    <link rel="icon" href="./Images/Logoes/h.png" />
+    <style>
+        body{
+            background-image: url(../Images/stay-connected-blue.jpg);
+        }
+    </style>
 </head>
 
 <body id="section1">
 
-    <?php require('../partials/_utility.php') ?>
-    <?php require('../partials/_sidebar.php ') ?>
-    <!-- -----------------BACK-TOP-TOP----------------- -->
+    <div class="progression-cont" id="prog-container">
+        <div class="progression-bar" id="mybar"></div>
+    </div>
 
+    <div class="second-nav-cont" id="second-navbar">
+        <div class="second-nav">
+            <ul class="second-nav-menu">
+                <li><a href="#content1">ONE</a></li>
+                <li><a href="#content2">TWO</a></li>
+                <li><a href="#content3">THREE</a></li>
+                <li><a href="#content4">FOUR</a></li>
+                <li><a href="#content5">FIVE</a></li>
+                <li><a href="#section1">TOP</a></li>
+                <li><a href="#bottom-part">BOTTOM</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- -----------------BACK-TOP-TOP----------------- -->
     <a href="#section1" id="back-to-top-switch">
         <div class="back-to-top-btn">
             <div class="b-t-t-btn-container">
@@ -32,30 +51,79 @@
             <div id="section1">
                 <!-- HEADER -->
                 <header id="navbar">
-
                     <div class="logo-container">
                         <div id="logo">
-                            <a href="/index.html">ABOUT_<span style="color: #e63946;">ME</span></a>
+                            <a href="index.php"
+                                >ABOUT<span style="color: #e63946"
+                                    >ME</span
+                                ></a
+                            >
                         </div>
                     </div>
 
-                    <nav id="main-menu">
+                    <nav class="navbar navbar-second" id="main-menu">
+                        <div class="sidebar_menu">
+                            <div class="bars_corner">
+                                <a
+                                    id="show-sidebar"
+                                    class="btn btn-sm btn-dark"
+                                    href="#"
+                                >
+                                    <i
+                                        id="bar_container"
+                                        class="fas fa-bars"
+                                    ></i>
+                                </a>
+                            </div>
+                        </div>
                         <ul id="nav-menu">
-                            <li id="nav-list-items"><a class="nav-link" id="link1" href="../index.html">HOME</a></li>
-                            <li id="nav-list-items"><a class="nav-link" id="link4" href="projects.html">PROJECTS</a>
+                            <li id="nav-list-items" class="active">
+                                <a
+                                    class="nav-link btn active"
+                                    id="link1"
+                                    href="../index.php"
+                                    >HOME</a
+                                >
                             </li>
-                            <li id="nav-list-items" class="active"><a class="nav-link" id="link5" href="#section1">ABOUT
-                                    ME</a></li>
-                            <li id="nav-list-items"><a class="nav-link" id="link3"
-                                    href="https://hiranmay1000.github.io/seekerbays/">BLOG</a></li>
-                            <li id="nav-list-items"><a class="nav-link" id="link2"
-                                    href="https://www.canva.com/design/DAFH2qEmzZQ/GmlQdfQODweu4PW86PImbw/view?utm_content=DAFH2qEmzZQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">RESUME</a>
+                            <li id="nav-list-items" class="menu-links">
+                                <a
+                                    class="nav-link btn"
+                                    id="link4"
+                                    href="projects.html"
+                                    >PROJECTS</a
+                                >
+                            </li>
+                            <li id="nav-list-items" class="menu-links">
+                                <a
+                                    class="nav-link btn"
+                                    id="link5"
+                                    href="#section4"
+                                    >ABOUT ME</a
+                                >
+                            </li>
+                            <li id="nav-list-items" class="menu-links">
+                                <a
+                                    class="nav-link btn"
+                                    id="link3"
+                                    href="https://hiranmay1000.github.io/seekerbays/"
+                                    >BLOG</a
+                                >
+                            </li>
+                            <li id="nav-list-items" class="menu-links">
+                                <a
+                                    class="nav-link btn"
+                                    id="link2"
+                                    href="https://www.canva.com/design/DAFH2qEmzZQ/GmlQdfQODweu4PW86PImbw/view?utm_content=DAFH2qEmzZQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+                                    >RESUME</a
+                                >
                             </li>
                         </ul>
                     </nav>
 
                     <div id="login-container">
-                        <button id="login-btn" type="button">SUBSCRIBE</button>
+                        <button id="login-btn" type="button">
+                            SUBSCRIBE
+                        </button>
                     </div>
                 </header>
                 <!-- HEADER-END -->
@@ -63,7 +131,7 @@
                 <section class="info-section">
                     <div class="info-container">
                         <h2 class="category">ABOUT ME</h2>
-                        <h4 class="heading">WHO AM I AND WHAT ARE MOTIVES?</h4>
+                        <h4 class="heading">WHO AM I AND WHAT MY MOTIVES ARE?</h4>
                         <h6 class="author">HIRANMAY</h6>
                     </div>
                 </section>
@@ -193,10 +261,10 @@
             <footer>
                 <div class="footer-container">
                     <ul>
-                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="../index.php">HOME</a></li>
                         <li><a href="#content1">ABOUT</a></li>
                         <li><a href="contact.html">CONTACTS</a></li>
-                        <li><a href="../index.html">PORTFOLIO</a></li>
+                        <li><a href="../index.php">PORTFOLIO</a></li>
                         <div class="copyright-notice">
                             <p id="copyright">© HIRANMAY All Rights Reserved</p>
                         </div>
@@ -252,7 +320,7 @@
 
 
     <!-- ..................................JAVASCRIPT.................................. -->
-    <script src=".../main.js"></script>
+    <script src="../main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- ..................................JAVASCRIP-END.................................. -->

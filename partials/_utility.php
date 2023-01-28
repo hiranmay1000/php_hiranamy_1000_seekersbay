@@ -1,6 +1,7 @@
 <!-- -----------------PRELOADER----------------- -->
 <div id="preloader-bg">
 <div id="preloader"></div>
+<p id="please-wait"></p>
 </div>
 
 <!-- ---------------------------------- -->
@@ -35,3 +36,19 @@
     </div>
 </a>
 <!-- -----------------BACK-TOP-TOP-END----------------- -->
+
+<script>
+    const loadingMess = document.getElementById("please-wait");
+    mess = "please wait...";
+
+    var i = 0;
+    setInterval(() => {
+        loadingMess.innerHTML += mess[i];
+        if(i == mess.length){
+            i = -1 // Reset
+            loadingMess.innerText = "";
+        }
+        ++i;
+    }, 200);
+    
+</script>

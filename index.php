@@ -51,34 +51,34 @@
                                         <h2>I'm a<br />software Engineer</h2>
                                     </div>
                                 </div>
-                                <div class="search-box">
-                                    <a href=""><i class="fa-duotone fa-books"></i>  </a>
-                                                                  <!-- <input
-                                        type="search"
-                                        name="Search"
-                                        class="search-input"
-                                        placeholder="Search here"
-                                    />
-                                    <div class="container-btn">
-                                        <button
-                                            id="search-btn"
-                                            type="submit"
-                                            name="Search"
-                                        >
-                                            SEARCH
-                                        </button>
-                                    </div> -->
-                                </div>
                             </div>
                             <div class="title-2">
-                                <p> 
+                                <p id="main-info-sugge">
                                     Below <br />
                                     are the some projects which I have made
-                                    througout my<br />
-                                    carrer
+                                    througout my
+                                    career
+                                </div>
+                                    <div class="search-box">
+                                        <form
+                                        action="https://www.google.com/search"
+                                        method="get"
+                                        >
+                                            <input
+                                            type="search"
+                                            name="q"
+                                            class="search-input"
+                                            placeholder="Search anything"
+                                            spellcheck="true"
+                                            data-ms-editor="true"
+                                            /><input
+                                            class="container-btn"
+                                            type="submit"
+                                            value="Google"
+                                            /><i class='fas fa-search'></i>
+                                        </form>
+                                    </div>
                                 </p>
-                                
-                            </div>
                         </div>
                     </section>
                 </div>

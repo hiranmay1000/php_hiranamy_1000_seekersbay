@@ -56,7 +56,7 @@ function scrollFunction() {
     // ..................ONSCROLL-PROGRESS-BAR-END..................
 
     if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-        document.getElementById("prog-container").style.display = "block";
+        document.getElementById("prog-container").style.visibility = "visible";
 
         document.getElementById("second-navbar").style.display = "flex";
     }
@@ -102,7 +102,7 @@ function scrollFunction() {
 
         document.getElementById("back-to-top-switch").style.display = "none";
 
-        document.getElementById("prog-container").style.display = "none";
+        document.getElementById("prog-container").style.visibility = "hidden";
 
         document.getElementById("second-navbar").style.display = "none";
 
