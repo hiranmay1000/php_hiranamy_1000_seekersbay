@@ -1,24 +1,25 @@
-<?php
+<?php // For email
 
 $isSub = false;
 $isCollab = false;
 
 if(isset($_POST['user_subs'])){
 
-    $server = "localhost";
-    $uname = "root";
-    $pass = "";
+    $server = "db4free.net";
+    $uname = "seekersbay_db";
+    $pass = "!hgLg9JczNtu4_@";
 
     // establish connection with database
     $connection = mysqli_connect($server, $uname, $pass);
 
     if(!$connection){
         die("connection to this database failed due to " . mysqli_connect_error());
-    }
+    }   
 
     $email = $_POST['email'];
 
-    $sql = "INSERT INTO `user_subscription`.`blog_subscribers` (`email`, `date`) VALUES ('$email', current_timestamp())";
+    $sql = "INSERT INTO `demo4lifedb`.`seekersbay_subscribers` (`email`, `date`) VALUES ('$email', current_timestamp())";
+
 
     if($connection->query($sql) == true){
         $isSub = true;
@@ -29,7 +30,8 @@ if(isset($_POST['user_subs'])){
     // disable connection
     $connection->close();
 
-}else if(isset($_POST['user_contrib_req'])){
+}else if(isset($_POST['user_contrib_req'])){ // For message
+
     $server = "localhost";
     $uname = "root";
     $pass = "";
@@ -45,6 +47,7 @@ if(isset($_POST['user_subs'])){
     $message = $_POST['user_req'];
 
     $sql2 = "INSERT INTO `user_subscription` . `user_collab` (`name`, `message`, `date`) VALUES ('$name', '$message', current_timestamp())";
+
 
     if($connection->query($sql2) == true){
         $isCollab = true;
