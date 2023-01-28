@@ -1,16 +1,17 @@
 <?php // For email
 
 $isSub = false;
-$isCollab = false;
+$isSubmit = false;
 
 if(isset($_POST['user_subs'])){
 
     $server = "db4free.net";
     $uname = "seekersbay_db";
     $pass = "!hgLg9JczNtu4_@";
+    $dbname = "demo4lifedb";
 
     // establish connection with database
-    $connection = mysqli_connect($server, $uname, $pass);
+    $connection = mysqli_connect($server, $uname, $pass, $dbname);
 
     if(!$connection){
         die("connection to this database failed due to " . mysqli_connect_error());
@@ -32,32 +33,30 @@ if(isset($_POST['user_subs'])){
 
 }else if(isset($_POST['user_contrib_req'])){ // For message
 
-    $server = "localhost";
-    $uname = "root";
-    $pass = "";
+    $server = "www.db4free.net";
+    $username = "seekersbay_db";
+    $password = "!hgLg9JczNtu4_@";
+    $dbname = "demo4lifedb";
 
-    // establish connection with database
-    $connection = mysqli_connect($server, $uname, $pass);
-    
+    // establish connection using MySQLi ext
+    $connection = mysqli_connect($server, $username, $password, $dbname);
+
     if(!$connection){
-        die("connection to this database failed due to " . mysqli_connect_error());
+        die("Not connected due to " . mysqli_connect_error());
     }
 
     $name = $_POST['name'];
-    $message = $_POST['user_req'];
+    $user_mess = $_POST['user_mess'];
 
-    $sql2 = "INSERT INTO `user_subscription` . `user_collab` (`name`, `message`, `date`) VALUES ('$name', '$message', current_timestamp())";
+    $sql_for_user_mess = "INSERT `demo4lifedb` . `user_collab` (`name`, `mess`, `date`) VALUE ('$name', '$user_mess', current_timestamp())";
 
+    if($connection->query($sql_for_user_mess)){
+        $isSubmit = true;
+    } else
+        echo "Not submitted your response";
 
-    if($connection->query($sql2) == true){
-        $isCollab = true;
-    }else{
-        echo "<br>Connection error!";
-    }
-
-    // disable connection
+    // close 
     $connection->close();
-
 }
 ?>
 
@@ -68,13 +67,13 @@ if(isset($_POST['user_subs'])){
             <form action="#newsletter_section" method="post">
                 <div class="message-container">
                     <input type="text" name="name" id="name-box" placeholder="Name *" required>
-                    <input type="text" name="user_req"id="mess-box" placeholder="Your Message" required>
+                    <input type="text" name="user_mess"id="mess-box" placeholder="Your Message" required>
                     <div class="collab-btns">
                         <input type="submit" value="SEND" class="submit-btn submit-btn-mess" name="user_contrib_req">
                         <input type="reset" value="RESET" class="reset-btn" style="background:pink">
                     </div>
-                    <?php if($isCollab == true){
-                        echo "<div> <p id='dis_collab_mess' style='color: lightgreen; font-size:17px; text-align: center;'>Thanks for showing interest <br> See you soon!</p></div>";
+                    <?php if($isSubmit == true){
+                        echo "<div> <p id='dis_collab_mess' style='color: lightgreen; font-size:17px; text-align: center;'>Your response has been submitted!<br>Thanks!</p></div>";
                     }?>
                 </div>
             </form>
