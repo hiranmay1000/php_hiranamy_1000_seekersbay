@@ -1,17 +1,17 @@
 window.onscroll = function () { hideNavBar() };
 window.onscroll = function () { minimizeNavBar() };
 
-// ........................PRE-LOADER........................=*/
+// _____________________PRE-LOADER_____________________=*/
 var loader = document.getElementById("preloader-bg");
 window.addEventListener("load", removePreLoader());
 
 function removePreLoader() {
     loader.style.display = "none";
 }
-// ........................PRE-LOADER-END......................*/
+// -------------------PRE-LOADER-END-------------------*/
 
 
-//// .....................NAV-BAR-HIDE-ONSCROLL..................
+//// _____________________NAV-BAR-HIDE-ONSCROLL_____________________
 // function hideNavBar() {
 //     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 //         document.getElementById("navbar").style.top = "-10px";
@@ -49,13 +49,13 @@ function removePreLoader() {
 // ============================NAV-BAR-ONSCROLL=================================
 function minimizeNavBar() {
 
-    // // .................ONSCROLL-PROGRESS-BAR...................
+    // // ----------------------ONSCROLL-PROGRESS-BAR----------------------..
     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
     document.getElementById("mybar").style.width = scrolled + "%";
     document.getElementById("prog-container").style.zIndex = "50";
-    // ..................ONSCROLL-PROGRESS-BAR-END..................
+    // ----------------------.ONSCROLL-PROGRESS-BAR-END----------------------.
 
     if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
         document.getElementById("prog-container").style.visibility = "visible";
