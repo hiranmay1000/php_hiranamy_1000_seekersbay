@@ -15,11 +15,11 @@ if(isset($_POST['user_subs'])){
 
     if(!$connection){
         die("connection to this database failed due to " . mysqli_connect_error());
-    }   
+    }
 
     $email = $_POST['email'];
 
-    $sql = "INSERT INTO `demo4lifedb`.`seekersbay_subscribers` (`email`, `date`) VALUES ('$email', current_timestamp())";
+    $sql = "INSERT INTO `seekersbay_subscribers` (`email`, `date`) VALUES ('$email', current_timestamp())";
 
 
     if($connection->query($sql) == true){
@@ -48,7 +48,7 @@ if(isset($_POST['user_subs'])){
     $name = $_POST['name'];
     $user_mess = $_POST['user_mess'];
 
-    $sql_for_user_mess = "INSERT `demo4lifedb` . `user_collab` (`name`, `mess`, `date`) VALUE ('$name', '$user_mess', current_timestamp())";
+    $sql_for_user_mess = "INSERT `user_collab` (`name`, `mess`, `date`) VALUE ('$name', '$user_mess', current_timestamp())";
 
     if($connection->query($sql_for_user_mess)){
         $isSubmit = true;
@@ -58,6 +58,16 @@ if(isset($_POST['user_subs'])){
     // close 
     $connection->close();
 }
+
+
+
+
+
+
+
+
+
+
 ?>
 
 <div class="section-container" id="newsletter_section">
@@ -87,7 +97,7 @@ if(isset($_POST['user_subs'])){
                     <h4 class="page-heading subscribe-heading">SUBSCRIBE TO MY NEWSLETTER</h4>
                     <input type="email" name="email" id="email-box" placeholder="Email *" required>
                     <input type="submit" value="SUBSCRIBE" class="submit-btn" name="user_subs">
-                    <?php if($isSub == true){
+                    <?php if($isSub){
                         echo "<div> <p id='dis_sub_mess' style='color: lightgreen; font-size:17px; '>Thanks for subscribing</p></div>";
                     }?>
                 </div>
@@ -97,15 +107,15 @@ if(isset($_POST['user_subs'])){
 </div>
 
 <script>
-    const sub_feedback = document.getElementById("dis_sub_mess");
     const collab_feedback = document.getElementById("dis_collab_mess");
-
-    function showSubsText(){
-        sub_feedback.style.visibility = "hidden";
-    }setTimeout("showSubsText()", 5000);
+    const sub_feedback = document.getElementById("dis_sub_mess");
 
     function showCollabText(){
         collab_feedback.style.visibility = "hidden";
     }setTimeout("showCollabText()", 5000);
-
+    
+    function showSubsText(){
+        sub_feedback.style.visibility = "hidden";
+    }setTimeout("showSubsText()", 5000);
+    
 </script>

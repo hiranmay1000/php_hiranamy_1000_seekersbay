@@ -1,70 +1,60 @@
-<header id="navbar">
+<header id="navbar" class="navbar-main">
+
+    <a id="show-sidebar" class="btn btn-sm" href="#">
+        <i id="bar_container" class="fas fa-bars"></i>
+    </a>
+
+
     <div class="logo-container">
         <div id="logo">
-            <a href="index.php">HIRAN<span style="color: #e63946">MAY</span></a>
+            <a href="index.php" style=" text-decoration:none;">HIRAN<span style="color: #e63946;">MAY</span></a>
         </div>
     </div>
 
-    <nav class="navbar navbar-second" id="main-menu">
-        <div class="sidebar_menu">
-            <div class="bars_corner">
-                <a
-                    id="show-sidebar"
-                    class="btn btn-sm btn-dark"
-                    href="#"
-                >
-                    <i
-                        id="bar_container"
-                        class="fas fa-bars"
-                    ></i>
-                </a>
-            </div>
-        </div>
-        <ul id="nav-menu">
-            <li id="nav-list-items" class="active">
-                <a
-                    class="nav-link btn active"
-                    id="link1"
-                    href="#section1"
-                    >HOME</a
-                >
-            </li>
-            <li id="nav-list-items" class="menu-links">
-                <a
-                    class="nav-link btn"
-                    id="link4"
-                    href="#section2"
-                    >PROJECTS</a
-                >
-            </li>
-            <li id="nav-list-items" class="menu-links">
-                <a
-                    class="nav-link btn"
-                    id="link5"
-                    href="#section4"
-                    >ABOUT ME</a
-                >
-            </li>
-            <li id="nav-list-items" class="menu-links">
-                <a
-                    class="nav-link btn"
-                    id="link3"
-                    href="https://hiranmay1000.github.io/seekerbays/"
-                    >BLOG</a
-                >
-            </li>
-            <li id="nav-list-items" class="menu-links">
-                <a
-                    class="nav-link btn"
-                    id="link2"
-                    href="https://www.canva.com/design/DAFH2qEmzZQ/GmlQdfQODweu4PW86PImbw/view?utm_content=DAFH2qEmzZQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
-                    >RESUME</a
-                >
-            </li>
-        </ul>
-    </nav>
-    <div id="login-container">
-        <button id="login-btn" type="button">LOG IN</button>
+    <div class="menu-container">
+        <nav class="nav-menu">
+            <ul  id="nav-menu-ele">
+                <a href="../index.php">Home</a>
+                <a href="">Resume</a>
+                <a href="./sub-pages/aboutme.php">About me</a>
+                <a href="./sub-pages/projects.php">Projetcs</a>
+                <a href="">Blog</a>
+            </ul>
+        </nav>
+    </div>
+
+
+
+
+
+
+    <div class="login-container" id="login-container-l" style="display:flex">
+        <?php
+        if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] != true) {
+            echo '<a class="btn btn-primary" data-bs-toggle="modal" href="#loginModal" role="button">Login</a>';
+        } else {
+            echo '<a class="btn btn-danger btn-primary" data-bs-toggle="modal" href="#logoutModal" role="button">Logout</a>';
+        }
+        ?>
+    </div>
+
+    <div class="login-container" id="login-container-sm" style="display:none">
+        <?php
+        if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] != true) {
+            echo '<a class="btn btn-sm btn-primary" data-bs-toggle="modal" href="#loginModal" role="button">Login</a>';
+        } else {
+            echo '<a class="btn btn-sm btn-danger btn-primary" data-bs-toggle="modal" href="#logoutModal" role="button">Logout</a>';
+        }
+        ?>
     </div>
 
 </header>
+
+
+<!-- <div class="sidebar_menu">
+    <div class="bars_corner">
+        <a id="show-sidebar" class="btn btn-sm" href="#">
+            <i id="bar_container" class="fas fa-bars"></i>
+        </a>
+    </div>
+</div> -->

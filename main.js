@@ -1,4 +1,5 @@
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function () { hideNavBar() };
+window.onscroll = function () { minimizeNavBar() };
 
 // ........................PRE-LOADER........................=*/
 var loader = document.getElementById("preloader-bg");
@@ -10,42 +11,43 @@ function removePreLoader() {
 // ........................PRE-LOADER-END......................*/
 
 
-//.....................NAV-BAR-HIDE-ONSCROLL..................
-
-// function scrollFunction() {
+//// .....................NAV-BAR-HIDE-ONSCROLL..................
+// function hideNavBar() {
 //     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-//         document.getElementById("navbar").style.top = "0px";
+//         document.getElementById("navbar").style.top = "-10px";
 //         var prevScrollpos = window.pageYOffset;
 //         window.onscroll = function () {
 //             var currentScrollPos = window.pageYOffset;
 //             if (prevScrollpos > currentScrollPos) {
-//                 document.getElementById("navbar").style.top = "25px";
+//                 minimizeNavBar();
+//                 document.getElementById("navbar").style.top = "0px";
 //             } else {
 //                 document.getElementById("navbar").style.top = "-80px";
 //             }
 //             prevScrollpos = currentScrollPos;
 //         }
 //     } else {
-//         document.getElementById("navbar").style.top = "0px";
+//         document.getElementById("navbar").style.top = "-10px";
 //         var prevScrollpos = window.pageYOffset;
 //         window.onscroll = function () {
 //             var currentScrollPos = window.pageYOffset;
 //             if (prevScrollpos > currentScrollPos) {
-//                 document.getElementById("navbar").style.top = "25px";
+//                 document.getElementById("navbar").style.top = "0px";
+//                 minimizeNavBar();
 //             } else {
-//                 document.getElementById("navbar").style.top = "-75px";
+//                 document.getElementById("navbar").style.top = "-80px";
+//                 minimizeNavBar();   
 //             }
 //             prevScrollpos = currentScrollPos;
 //         }
 //     }
 // }
-
-// // =========================NAV-BAR-HIDE-ONSCROLL-END===========================
+//// =========================NAV-BAR-HIDE-ONSCROLL-END===========================
 
 
 
 // ============================NAV-BAR-ONSCROLL=================================
-function scrollFunction() {
+function minimizeNavBar() {
 
     // // .................ONSCROLL-PROGRESS-BAR...................
     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -62,8 +64,15 @@ function scrollFunction() {
     }
 
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        
+        document.getElementById("logo").style.fontSize = "22px";
+        document.getElementById("logo").style.lineHeight = "45px";
+        
         document.getElementById("bar_container").style.fontSize = "18px";
         document.getElementById("bar_container").style.marginTop = "-18px";
+
+        document.getElementById("nav-menu-ele").style.fontSize = "15px";
+        document.getElementById("nav-menu-ele").style.height = "60px";
 
         document.getElementById("navbar").style.position = "fixed";
         document.getElementById("navbar").style.zIndex = "4";
@@ -71,14 +80,12 @@ function scrollFunction() {
         document.getElementById("navbar").style.height = "45px";
         document.getElementById("navbar").style.boxShadow = " 0px 0px 40px #2b2b2b";
 
-        document.getElementById("login-container").style.height = "45px";
+        document.getElementById("login-container-l").style.display = "none";
+        document.getElementById("login-container-sm").style.display = "flex";
 
         document.getElementById("login-btn").style.width = "75px";
         document.getElementById("login-btn").style.height = "25px";
         document.getElementById("login-btn").style.fontSize = "8px";
-
-        document.getElementById("logo").style.fontSize = "22px";
-        document.getElementById("logo").style.lineHeight = "45px";
 
         document.getElementById("back-to-top-switch").style.display = "block";
 
@@ -97,6 +104,11 @@ function scrollFunction() {
 
 
     } else {
+
+        
+        document.getElementById("logo").style.fontSize = "28px";
+        document.getElementById("logo").style.lineHeight = "80px";
+        
         document.getElementById("bar_container").style.fontSize = "22px";
         document.getElementById("bar_container").style.marginTop = "0px";
 
@@ -106,17 +118,22 @@ function scrollFunction() {
 
         document.getElementById("second-navbar").style.display = "none";
 
+        document.getElementById("nav-menu-ele").style.fontSize = "17px";
+        document.getElementById("nav-menu-ele").style.height = "80px";
+
         document.getElementById("navbar").style.height = "80px";
         document.getElementById("navbar").style.alignItems = "center";
         document.getElementById("navbar").style.boxShadow = "none";
+
+        document.getElementById("login-container-sm").style.display = "none";
+        document.getElementById("login-container-l").style.display = "flex";
+
 
 
         document.getElementById("login-btn").style.width = "100px";
         document.getElementById("login-btn").style.height = "38px";
         document.getElementById("login-btn").style.fontSize = "12px";
 
-        document.getElementById("logo").style.fontSize = "32px";
-        document.getElementById("logo").style.lineHeight = "80px";
 
         ["link1", "link2", "link3", "link4", "link5"].forEach(function (id) {
             document.getElementById(id).style.lineHeight = "80px";
@@ -174,14 +191,3 @@ jQuery(function ($) {
 });
 
 
-// subscribe-btn-----------------------------------------------
-const btn = document.getElementById("login-btn");
-btn.addEventListener('click', updateSubs);
-
-function updateSubs() {
-    if (btn.textContent.includes('SUBSCRIBE')) {
-        btn.textContent = "SUBSCRIBED";
-    } else if (btn.textContent.includes('SUBSCRIBED')) {
-        btn.textContent = "SUBSCRIBE";
-    }
-}
