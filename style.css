@@ -706,7 +706,7 @@ header #logo {
     font-weight: 100px;
     text-align: left;
     line-height: 80px;
-    transition: 0.3s ease-in;
+    transition: 0.2s ease-in;
     padding-left: 100px;
 }
 
@@ -752,13 +752,15 @@ header #logo a {
 }
 
 .nav-menu #nav-menu-ele {
+    text-transform: uppercase;
     display: flex;
-    font-size: 17px;
+    font-size: 16px;
     height: 80px;
     margin: 0;
     justify-content: center;
     align-items: center;
-    text-decoration: none !important;
+    transition: 0.2s ease-in-out !important;
+
 }
 
 .nav-menu a {
@@ -793,11 +795,6 @@ header #logo a {
     transform: rotate(-90deg);
     margin-right: -25px;
     margin-bottom: -25px;
-}
-
-header nav ul {
-    line-height: 3;
-    transition: 0.3s ease-in;
 }
 
 /* MAIN */

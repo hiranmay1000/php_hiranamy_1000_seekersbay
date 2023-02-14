@@ -71,7 +71,7 @@ function minimizeNavBar() {
         document.getElementById("bar_container").style.fontSize = "18px";
         document.getElementById("bar_container").style.marginTop = "-18px";
 
-        document.getElementById("nav-menu-ele").style.fontSize = "15px";
+        document.getElementById("nav-menu-ele").style.fontSize = "12px";
         document.getElementById("nav-menu-ele").style.height = "60px";
 
         document.getElementById("navbar").style.position = "fixed";
@@ -118,7 +118,7 @@ function minimizeNavBar() {
 
         document.getElementById("second-navbar").style.display = "none";
 
-        document.getElementById("nav-menu-ele").style.fontSize = "17px";
+        document.getElementById("nav-menu-ele").style.fontSize = "16px";
         document.getElementById("nav-menu-ele").style.height = "80px";
 
         document.getElementById("navbar").style.height = "80px";
