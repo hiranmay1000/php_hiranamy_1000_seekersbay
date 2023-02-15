@@ -1,5 +1,6 @@
 <?php
 
+$isloggedOut = false;
 if (isset($_GET['logout'])) {
     // Clear the session variables
 

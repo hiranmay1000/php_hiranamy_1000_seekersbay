@@ -1,10 +1,22 @@
-<?php require('user_auth_sys/signup.php') ?>
-<?php require('user_auth_sys/login.php') ?>
+<?php require('user_auth_sys/login_signup.php') ?>
 
 <?php
+$showLoginModal = false;
 
-if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] !== true) {
-    // header('location: \myprojects\php-v-hiranmay1000\php_hiranamy_1000_seekersbay\partials\_header_nav.php');
+if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] != true) {
+    $showLoginModal = true;
+}
+
+
+
+if ($showLoginModal) {
+
+    // Use JavaScript to delay the showing of the modal
+    // echo '<script>
+    //         setTimeout(function() {
+    //                 $("#signupModal").modal("show");
+    //             }, 1000); // Change delay time (in milliseconds) as needed
+    //         </script>';
 }
 
 
@@ -26,8 +38,8 @@ if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] !== true) {
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script>
         document.addEventListener("touchmove", function (event) {
@@ -35,7 +47,7 @@ if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] !== true) {
         })
     </script>
 
-    <title>Hiranmay's web</title>
+    <title>Hiranmay's Web</title>
 </head>
 
 <body id="section1">
@@ -53,163 +65,152 @@ if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] !== true) {
 
 
         <?php
-
-
-
-
-
-        // Feedback message
+        // Advance method to show feedback
         
+        $username = isset($_SESSION['reg_cust_uname']) ? $_SESSION['reg_cust_uname'] : '';
+        function showFeedback($type, $message)
+        {
+            $id = $type . '-feedback';
+            $class = 'alert';
+            $icon = '';
+
+            switch ($type) {
+                case 'loggedin-success':
+                    $class .= ' alert-success';
+                    $icon = '✅';
+                    break;
+                case 'unmatched':
+                    $class .= ' alert-danger';
+                    break;
+                case 'not-avail':
+                case 'incorrect-comb':
+                case 'new':
+                case 'logged-out':
+                    $class .= ' alert-warning';
+                    $icon = '❌';
+                    break;
+            }
+
+
+            echo "
+                <div id='$id' class='$class align-items-center my-0' role='alert'>
+                    <div>
+                        <strong>$message $icon</strong>
+                    </div>
+                </div>
+
+                <script>
+                    function hideFeedback(){
+                        document.getElementById('$id').style.display = 'none';
+                    }
+                    setInterval(hideFeedback, 5000);
+                </script>
+                ";
+
+        }
+        
+        $suggestForReg = "<script>
+        setTimeout(function() {
+                $('#signupModal').modal('show');
+            }, 1000); // Change delay time (in milliseconds) as needed
+        </script>";
 
         if ($isFound) {
-            echo '
-        <div id="loggedin-success-feedback" class="alert alert-success align-items-center my-0" role="alert">
-            <!-- <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:">
-                <use xlink:href="#check-circle-fill" />
-            </svg> -->
-            <div>
-                <strong>Welcome [ ' . $_SESSION["reg_cust_uname"] . ' ] - You have been loggedin successully</strong>
-            </div>
-        </div>
-
-
-        <script>
-            function hideFeedback(){
-                document.getElementById("loggedin-success-feedback").style.display = "none";
-            }setInterval("hideFeedback()", 5000);
-        </script>
-
-
-';
+            showFeedback('loggedin-success', "Welcome [$username] - You have been logged in successfully");
         } else if ($isReg) {
-            echo '
-
-        <div id="loggedin-success-feedback" class="alert alert-success align-items-center my-0" role="alert">
-            <!-- <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:">
-                <use xlink:href="#check-circle-fill" />
-            </svg> -->
-            <div>
-                <strong>Your account has been successully created ✅</strong>
-            </div>
-        </div>
-
-
-        <script>
-            function hideFeedback(){
-                document.getElementById("loggedin-success-feedback").style.display = "none";
-            }setInterval("hideFeedback()", 5000);
-        </script>
-
-
-';
+            showFeedback('loggedin-success', 'Your account has been successfully created');
         } else if ($isUnmatched) {
-            echo '
-
-        <div id="loggedin-success-feedback" class="alert alert-danger align-items-center my-0" role="alert">
-            <!-- <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:">
-                <use xlink:href="#check-circle-fill" />
-            </svg> -->
-            <div>
-                <strong>Your password does not matched, check again!</strong>
-            </div>
-        </div>
-
-
-        <script>
-            function hideFeedback(){
-                document.getElementById("loggedin-success-feedback").style.display = "none";
-            }setInterval("hideFeedback()", 5000);
-        </script>
-
-
-';
+            showFeedback('unmatched', 'Your password does not match, check again!');
         } else if ($isNew) {
-            echo '
-
-        <div id="loggedin-success-feedback" class="alert alert-warning align-items-center my-0" role="alert">
-            <!-- <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:">
-                <use xlink:href="#check-circle-fill" />
-            </svg> -->
-            <div>
-                <strong>No user found. Please create an account first</strong>
-            </div>
-        </div>
-
-
-
-        <script>
-            function hideFeedback(){
-                document.getElementById("loggedin-success-feedback").style.display = "none";
-            }setInterval("hideFeedback()", 5000);
-        </script>
-
-
-';
+            showFeedback('new', 'No user found. Please create an account first');
+            echo $suggestForReg;
         } else if ($isIncorrectComb) {
-            echo '
-
-    <div id="loggedin-success-feedback" class="alert alert-warning align-items-center my-0" role="alert">
-        <!-- <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:">
-            <use xlink:href="#check-circle-fill" />
-        </svg> -->
-        <div>
-            <strong>Incorrect ❌ </strong> combination of <strong> username and password!</strong> please check again
-        </div>
-    </div>
-
-
-    <script>
-        function hideFeedback(){
-            document.getElementById("loggedin-success-feedback").style.display = "none";
-        }setInterval("hideFeedback()", 5000);
-    </script>
-
-
-';
+            showFeedback('incorrect-comb', 'Incorrect combination of username and password! Please check again');
         } else if ($isNotAvail) {
-            echo '
+            showFeedback('not-avail', 'Sorry, this username is not available. Kindly choose a different username');
+        } else if ($isloggedOut) {
+            showFeedback('logged-out', 'Logout successful. See you again!');
+        }
 
-    <div id="loggedin-success-feedback" class="alert alert-warning align-items-center my-0" role="alert">
-        <!-- <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:">
-            <use xlink:href="#check-circle-fill" />
-        </svg> -->
-        <div>
-            Sorry <strong>this username is not available </strong>kindly choose different username ❌</div>
-    </div>
+        ?>
 
 
-    <script>
-        function hideFeedback(){
-            document.getElementById("loggedin-success-feedback").style.display = "none";
-        }setInterval("hideFeedback()", 5000);
-    </script>
 
 
-';
-        } else
 
-            if ($isloggedOut) {
-                echo '
+
+        <?php
+        // Another easy method to show feedback
+        // Feedback message
         
-                    <div id="logout-success-feedback" class="alert alert-warning align-items-center my-0" role="alert">
-                    <!-- <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:">
-                        <use xlink:href="#check-circle-fill" />
-                    </svg> -->
-                    <div>
-                        <strong>Logout</strong> successful. See you again!
-                    </div>
-                    </div>
-                    
-                    
-                    <script>
-                    function hideFeedback(){
-                        document.getElementById("logout-success-feedback").style.display = "none";
-                    }setInterval("hideFeedback()", 5000);
-                    </script>
-                ';
-            }
-            
-    ?>
+        //         if ($isFound) {
+//             $feedback = '
+//         <div id="loggedin-success-feedback" class="alert alert-success align-items-center my-0" role="alert">
+//             <div>
+//                 <strong>Welcome [ ' . $_SESSION["reg_cust_uname"] . ' ] - You have been loggedin successully</strong>
+//             </div>
+//         </div>
+//     ';
+//         } else if ($isReg) {
+//             $feedback = '
+//         <div id="loggedin-success-feedback" class="alert alert-success align-items-center my-0" role="alert">
+//             <div>
+//                 <strong>Your account has been successully created ✅</strong>
+//             </div>
+//         </div>
+//     ';
+//         } else if ($isUnmatched) {
+//             $feedback = '
+//         <div id="loggedin-success-feedback" class="alert alert-danger align-items-center my-0" role="alert">
+//             <div>
+//                 <strong>Your password does not matched, check again!</strong>
+//             </div>
+//         </div>
+//     ';
+//         } else if ($isNew) {
+//             $feedback = '
+//         <div id="loggedin-success-feedback" class="alert alert-warning align-items-center my-0" role="alert">
+//             <div>
+//                 <strong>No user found. Please create an account first</strong>
+//             </div>
+//         </div>
+//     ';
+//         } else if ($isIncorrectComb) {
+//             $feedback = '
+//         <div id="loggedin-success-feedback" class="alert alert-warning align-items-center my-0" role="alert">
+//             <div>
+//                 <strong>Incorrect ❌ </strong> combination of <strong> username and password!</strong> please check again
+//             </div>
+//         </div>
+//     ';
+//         } else if ($isNotAvail) {
+//             $feedback = '
+//         <div id="loggedin-success-feedback" class="alert alert-warning align-items-center my-0" role="alert">
+//             <div>
+//                 Sorry <strong>this username is not available </strong>kindly choose different username ❌</div>
+//         </div>
+//     ';
+//         } else if ($isloggedOut) {
+//             $feedback = '
+//         <div id="logout-success-feedback" class="alert alert-warning align-items-center my-0" role="alert">
+//             <div>
+//                 <strong>Logout</strong> successful. See you again!
+//             </div>
+//         </div>
+//     ';
+//         }
+        
+        //         echo $feedback . '
+//     <script>
+//         function hideFeedback(){
+//             document.getElementById("loggedin-success-feedback").style.display = "none";
+//         }
+//         setInterval(hideFeedback, 5000);
+//     </script>
+// ';
+        ?>
+
+
 
 
 
@@ -239,7 +240,7 @@ if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] !== true) {
                         <div class="border-title">
                             <div class="title-inside-box">
                                 <div class="title">
-                                    <h2>I'm a<br />software Engineer</h2>
+                                    <h2>Welcome to my<br />portfolio website</h2>
                                 </div>
                             </div>
                         </div>
