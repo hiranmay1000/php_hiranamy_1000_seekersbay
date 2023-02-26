@@ -1,28 +1,3 @@
-<?php require('user_auth_sys/login_signup.php') ?>
-
-<?php
-$showLoginModal = false;
-
-if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] != true) {
-    $showLoginModal = true;
-}
-
-
-
-if ($showLoginModal) {
-
-    // Use JavaScript to delay the showing of the modal
-    // echo '<script>
-    //         setTimeout(function() {
-    //                 $("#signupModal").modal("show");
-    //             }, 1000); // Change delay time (in milliseconds) as needed
-    //         </script>';
-}
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,6 +26,18 @@ if ($showLoginModal) {
 </head>
 
 <body id="section1">
+    <?php require('user_auth_sys/login_signup.php') ?>
+
+    <?php
+    $showLoginModal = false;
+
+    if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] != true) {
+        $showLoginModal = true;
+    }
+
+
+
+    ?>
 
 
     <?php require('partials/_sidebar.php') ?>
@@ -58,8 +45,6 @@ if ($showLoginModal) {
 
     <!---------------------------- FULL-WEBPAGE --------------------------->
     <div id="full-webpage">
-
-
 
 
 
@@ -108,7 +93,7 @@ if ($showLoginModal) {
                 ";
 
         }
-        
+
         $suggestForReg = "<script>
         setTimeout(function() {
                 $('#signupModal').modal('show');
@@ -133,8 +118,6 @@ if ($showLoginModal) {
         }
 
         ?>
-
-
 
 
 
