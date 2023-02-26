@@ -240,7 +240,7 @@ if ($showLoginModal) {
                         <div class="border-title">
                             <div class="title-inside-box">
                                 <div class="title">
-                                    <h2>Welcome to my<br />portfolio website</h2>
+                                    <h2>Welcome <br> to my portfolio website</h2>
                                 </div>
                             </div>
                         </div>

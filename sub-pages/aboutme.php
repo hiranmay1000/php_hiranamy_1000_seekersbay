@@ -50,7 +50,7 @@
             <!-- --------------------- PAGE-1 ----------------------------->
             <div id="section1">
                 <!-- HEADER -->
-                <?php include("../partials/_header_nav.php") ?>
+                <?php require("../partials/_header_nav.php") ?>
                 <!-- HEADER-END -->
 
                 <section class="info-section">
