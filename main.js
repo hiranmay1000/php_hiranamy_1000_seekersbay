@@ -83,7 +83,7 @@ function minimizeNavBar() {
 
         document.getElementById("back-to-top-switch").style.display = "block";
         
-        document.getElementById("index-banner").style.backgroundSize = "45%";
+        document.getElementById("index-banner").style.backgroundSize = "40%";
 
         document.getElementById("main-info-sugge").style.fontSize = "20px";
 

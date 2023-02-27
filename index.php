@@ -200,10 +200,10 @@
 
         <main>
             <!-- --------------------- PAGE-1 ----------------------------->
+            <!-- HEADER -->
+            <?php require('partials/_header_nav.php') ?>
+            <!-- HEADER-END -->
             <div class="page1" id="section1">
-                <!-- HEADER -->
-                <?php require('partials/_header_nav.php') ?>
-                <!-- HEADER-END -->
 
                 <section class="index-banner" id="index-banner">
                     <div class="r_box">
@@ -221,7 +221,7 @@
                         <div class="border-title">
                             <div class="title-inside-box">
                                 <div class="title">
-                                    <h2>Welcome <br> to my portfolio website</h2>
+                                    <h2><em>Welcome</em> <br> <em>to my portfolio website</em></h2>
                                 </div>
                             </div>
                         </div>
@@ -229,13 +229,13 @@
                             <p id="main-info-sugge">
                                 Greetings and welcome
                             </p>
-                                <div class="search-box">
-                                    <form action="https://www.google.com/search" method="get">
-                                        <input type="search" name="q" class="search-input" placeholder="Search anything"
-                                        spellcheck="true" data-ms-editor="true" /><input class="container-btn" type="submit"
-                                        value="Google" /><i class='fas fa-search'></i>
-                                    </form>
-                                </div>
+                            <div class="search-box">
+                                <form action="https://www.google.com/search" method="get">
+                                    <input type="search" name="q" class="search-input" placeholder="Search anything"
+                                        spellcheck="true" data-ms-editor="true" /><input class="container-btn"
+                                        type="submit" value="Google" /><i class='fas fa-search'></i>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -1603,6 +1603,10 @@ footer #copyright {
         padding: 0;
         width: 200px;
     }
+    
+    /* -------------------------PAGE1----------------------------*/
+
+    /* -------------------------PAGE1-END----------------------------*/
 
     /* -------------------------PAGE4-NEWSL----------------------------*/
     .page4-newsl {
@@ -1785,7 +1789,6 @@ footer #copyright {
 
     .index-banner h2 {
         color: #fff;
-        font-size: 54px;
         line-height: 70px;
         text-shadow: 1px 1px 5px grey;
     }
