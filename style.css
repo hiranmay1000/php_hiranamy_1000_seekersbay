@@ -727,7 +727,7 @@ header #logo a {
 }
 
 .nav-menu a {
-    color: #899bad;
+    color: rgb(137, 155, 173);
     padding: 10px;
 }
 
@@ -817,16 +817,14 @@ main .index-banner {
     font-size: 18px;
     text-align: center;
     color: #f3f3f3;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 4px 4px 6px #000000;
     padding-top: 30px;
     margin: auto 80px;
     line-height: 22px;
 }
 
-
 .title-2 p {
     font-family: sans-serif;
-    width: 850px;
     margin: 0 auto;
     transition: 1s;
     color: lightsteelblue;
@@ -836,6 +834,7 @@ main .index-banner {
     display: table-cell;
     vertical-align: middle;
 }
+
 
 main .index-banner {
     background-image: url(./Images/dark_laptop_compressed.jpg);
@@ -852,8 +851,6 @@ main .index-banner {
     text-align: center;
     margin: 0 auto;
 }
-
-
 
 /* google search box */
 .search-box {
@@ -1182,7 +1179,7 @@ footer #copyright {
     font-size: 22px;
     display: block;
     z-index: 100000;
-    color: lightsteelblue;
+    color: skyblue;
 }
 
 /* ====================ABOUT-ME-PAGE-SECTION================== */
@@ -1559,6 +1556,7 @@ footer #copyright {
         display: flex;
     }
 
+
     #blog,
     #contacts {
         display: block;
@@ -1670,7 +1668,6 @@ footer #copyright {
     .software {
         float: left;
     }
-
 
     .border-title {
         width: 800px;
