@@ -7,7 +7,7 @@
 
     <div class="logo-container">
         <div id="logo">
-            <a href="index.php" style=" text-decoration:none;">HIRAN<span style="color: #e63946;">MAY</span></a>
+            <a href="../index.php" style=" text-decoration:none;">HIRAN_<span style="color: #e63946;">MAY</span></a>
         </div>
     </div>
 
@@ -49,12 +49,3 @@
     </div>
 
 </header>
-
-
-<!-- <div class="sidebar_menu">
-    <div class="bars_corner">
-        <a id="show-sidebar" class="btn btn-sm" href="#">
-            <i id="bar_container" class="fas fa-bars"></i>
-        </a>
-    </div>
-</div> -->

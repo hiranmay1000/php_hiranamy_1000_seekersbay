@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./Images/Logoes/h.png" />
+    <link rel="icon" href="Images/Logoes/h.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -22,7 +22,7 @@
         })
     </script>
 
-    <title>Hiranmay's Web</title>
+    <title>Portfolio web</title>
 </head>
 
 <body id="section1">
@@ -34,8 +34,6 @@
     if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] != true) {
         $showLoginModal = true;
     }
-
-
 
     ?>
 
@@ -103,7 +101,7 @@
         if ($isFound) {
             showFeedback('loggedin-success', "Welcome [$username] - You have been logged in successfully");
         } else if ($isReg) {
-            showFeedback('loggedin-success', 'Your account has been successfully created');
+            showFeedback('loggedin-success', 'Your account has been created successfully and you are logged in');
         } else if ($isUnmatched) {
             showFeedback('unmatched', 'Your password does not match, check again!');
         } else if ($isNew) {
@@ -231,15 +229,15 @@
                             <p id="main-info-sugge">
                                 Greetings and welcome <br />
                                 Welcome to my online portfolio
+                                <div class="search-box">
+                                    <form action="https://www.google.com/search" method="get">
+                                        <input type="search" name="q" class="search-input" placeholder="Search anything"
+                                        spellcheck="true" data-ms-editor="true" /><input class="container-btn" type="submit"
+                                        value="Google" /><i class='fas fa-search'></i>
+                                    </form>
+                                </div>
+                            </p>
                         </div>
-                        <div class="search-box">
-                            <form action="https://www.google.com/search" method="get">
-                                <input type="search" name="q" class="search-input" placeholder="Search anything"
-                                    spellcheck="true" data-ms-editor="true" /><input class="container-btn" type="submit"
-                                    value="Google" /><i class='fas fa-search'></i>
-                            </form>
-                        </div>
-                        </p>
                     </div>
                 </section>
             </div>

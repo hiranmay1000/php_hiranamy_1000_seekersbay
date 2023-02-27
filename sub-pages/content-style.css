@@ -12,13 +12,6 @@ body {
     scroll-behavior: smooth;
 }
 
-body {
-    background-image: url(../Images/macLaren.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
 .page4{
     margin-top: 80px;
 }

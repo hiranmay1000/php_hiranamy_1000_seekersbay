@@ -50,11 +50,11 @@ function removePreLoader() {
 function minimizeNavBar() {
 
     // // ----------------------ONSCROLL-PROGRESS-BAR----------------------..
-    // var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    // var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    // var scrolled = (winScroll / height) * 100;
-    // document.getElementById("mybar").style.width = scrolled + "%";
-    // document.getElementById("prog-container").style.zIndex = "50";
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("mybar").style.width = scrolled + "%";
+    document.getElementById("prog-container").style.zIndex = "50";
     // ----------------------.ONSCROLL-PROGRESS-BAR-END----------------------.
 
     if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
@@ -72,10 +72,11 @@ function minimizeNavBar() {
         document.getElementById("bar_container").style.marginTop = "-18px";
 
         document.getElementById("nav-menu-ele").style.fontSize = "12px";
-        document.getElementById("nav-menu-ele").style.height = "60px";
-
+        document.getElementById("nav-menu-ele").style.height = "60px"; 
+        
         document.getElementById("navbar").style.height = "45px";
         document.getElementById("navbar").style.boxShadow = " 0px 0px 40px #2b2b2b";
+        document.getElementById("navbar").style.background = "#e9ebedcc";
 
         document.getElementById("login-container-l").style.display = "none";
         document.getElementById("login-container-sm").style.display = "flex";
@@ -101,6 +102,7 @@ function minimizeNavBar() {
 
         document.getElementById("navbar").style.height = "80px";
         document.getElementById("navbar").style.boxShadow = "none";
+        document.getElementById("navbar").style.background = "none";
 
         document.getElementById("second-navbar").style.display = "none";
 

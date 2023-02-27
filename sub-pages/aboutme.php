@@ -5,15 +5,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
+    <title>Hiranmay</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="content-style.css">
     <link rel="icon" href="./Images/Logoes/h.png" />
-    <style>
-        body{
-            background-image: url(../Images/stay-connected-blue.jpg);
-        }
-    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body id="section1">
@@ -42,15 +46,68 @@
             </div>
         </div>
     </a>
-    <!-- -----------------BACK-TOP-TOP-END----------------- -->
+    <!-------------------BACK-TOP-TOP-END------------------->
     <!---------------------------- FULL-WEBPAGE --------------------------->
     <div id="full-webpage">
         <main>
 
-            <!-- --------------------- PAGE-1 ----------------------------->
+            <!----------------------- PAGE-1 ----------------------------->
             <div id="section1">
                 <!-- HEADER -->
-                <?php require("../partials/_header_nav.php") ?>
+                <!-- <?php require('../partials/_header_nav.php') ?> -->
+                <header id="navbar" class="navbar-main">
+
+                    <a id="show-sidebar" class="btn btn-sm" href="#">
+                        <i id="bar_container" class="fas fa-bars"></i>
+                    </a>
+
+
+                    <div class="logo-container">
+                        <div id="logo">
+                            <a href="../index.php" style=" text-decoration:none;">HIRAN_<span
+                                    style="color: #e63946;">MAY</span></a>
+                        </div>
+                    </div>
+
+                    <div class="menu-container">
+                        <nav class="nav-menu">
+                            <ul id="nav-menu-ele">
+                                <a href="../index.php">Home</a>
+                                <a href="shorturl.at/mpLNQ">Resume</a>
+                                <a href="./sub-pages/aboutme.php">About me</a>
+                                <a href="./sub-pages/projects.php">Projetcs</a>
+                                <a href="">Blog</a>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+
+
+
+
+                    <div class="login-container" id="login-container-l" style="display:flex">
+                        <?php
+                        if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] != true) {
+                            echo '<a class="btn btn-primary" data-bs-toggle="modal" href="#loginModal" role="button">Login</a>';
+                        } else {
+                            echo '<a class="btn btn-danger btn-primary" data-bs-toggle="modal" href="#logoutModal" role="button">Logout</a>';
+                        }
+                        ?>
+                    </div>
+
+                    <div class="login-container" id="login-container-sm" style="display:none">
+                        <?php
+                        if (!isset($_SESSION['loggedin']) or $_SESSION['reg_cust_uname'] != true) {
+                            echo '<a class="btn btn-sm btn-primary" data-bs-toggle="modal" href="#loginModal" role="button">Login</a>';
+                        } else {
+                            echo '<a class="btn btn-sm btn-danger btn-primary" data-bs-toggle="modal" href="#logoutModal" role="button">Logout</a>';
+                        }
+                        ?>
+                    </div>
+
+                </header>
+
                 <!-- HEADER-END -->
 
                 <section class="info-section">
@@ -62,9 +119,9 @@
                 </section>
 
             </div>
-            <!------------------------- PAGE-1-END------------------------->
+            <!-------------------------PAGE-1-END------------------------->
 
-            <!-- ------------------------PAGE-2-------------------------- -->
+            <!--------------------------PAGE-2---------------------------->
             <div class="wrapper">
                 <section class="content">
                     <div class="content-container">
@@ -87,7 +144,7 @@
                             can also
                             collaborate
                             with me through (code with '<a
-                                href="https://hiranmay1000.github.io/seekerbays">seekersbay.com</a>'). <br> <br>
+                                href="https://hiranmay1000.github.io/seekerbays">seekerbays.com</a>'). <br> <br>
                             My hobbies
                             are
                             web-designing and developing, blogging, reading, painting, playing guitar, drumming,
@@ -245,9 +302,14 @@
 
 
     <!-- ..................................JAVASCRIPT.................................. -->
-    <script src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="../main.js"></script>
     <!-- ..................................JAVASCRIP-END.................................. -->
 </body>
 

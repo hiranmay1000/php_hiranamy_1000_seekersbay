@@ -49,7 +49,6 @@ if (isset($_POST['user_signup'])) {
 
 
 
-
 } else if (isset($_POST['user_login'])) {
     $reg_cust_uname = $_POST['reg_cust_uname'];
     $reg_cust_pass = $_POST['reg_cust_pass'];
@@ -79,7 +78,6 @@ if (isset($_POST['user_signup'])) {
     }
 
 }
-
 
 
 

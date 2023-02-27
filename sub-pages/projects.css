@@ -1,3 +1,147 @@
-.content-container{
-    height: calc(100vh - 55px);
-}
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  .all-projects-links-child {
+    position: absolute;
+    height: 101.73%;
+    width: 100.83%;
+    top: 0;
+    right: -0.42%;
+    bottom: -1.73%;
+    left: -0.42%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .all-projects-links-inner,
+  .all-projects-links-item,
+  .rectangle-div {
+    position: absolute;
+    height: 32.18%;
+    width: 29.06%;
+    top: 14.04%;
+    right: 32.71%;
+    bottom: 53.78%;
+    left: 38.23%;
+    background-color: var(--color-gray-200);
+  }
+  .all-projects-links-inner,
+  .rectangle-div {
+    width: 24.48%;
+    top: 54.64%;
+    right: 42.92%;
+    bottom: 13.17%;
+    left: 32.6%;
+  }
+  .rectangle-div {
+    width: 18.96%;
+    top: 14.04%;
+    right: 8.13%;
+    bottom: 53.78%;
+    left: 72.92%;
+  }
+  .all-projects-links-child1,
+  .all-projects-links-child2,
+  .all-projects-links-child3 {
+    position: absolute;
+    height: 32.18%;
+    width: 18.65%;
+    top: 54.64%;
+    right: 72.6%;
+    bottom: 13.17%;
+    left: 8.75%;
+    background-color: var(--color-gray-200);
+  }
+  .all-projects-links-child2,
+  .all-projects-links-child3 {
+    width: 24.48%;
+    top: 14.04%;
+    right: 67.4%;
+    bottom: 53.78%;
+    left: 8.13%;
+  }
+  .all-projects-links-child3 {
+    width: 29.06%;
+    top: 54.64%;
+    right: 8.65%;
+    bottom: 13.17%;
+    left: 62.29%;
+  }
+  .all-projects-links {
+    position: absolute;
+    top: 1795px;
+    left: 240px;
+    width: 960px;
+    height: 463px;
+  }
+  .blackjack-component-child {
+    position: absolute;
+    height: 101.36%;
+    width: 100.83%;
+    top: 0;
+    right: -0.42%;
+    bottom: -1.36%;
+    left: -0.42%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .this-game-is {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .you-can-definitely {
+    margin: 0;
+  }
+  .this-game-is-container {
+    position: absolute;
+    width: 35.73%;
+    top: 43.88%;
+    left: 7.4%;
+    display: inline-block;
+  }
+  .blackjack-component-item {
+    position: absolute;
+    height: 71.43%;
+    width: 38.54%;
+    top: 15.65%;
+    right: 6.04%;
+    bottom: 12.93%;
+    left: 55.42%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .blackjack-game {
+    position: absolute;
+    height: 6.97%;
+    width: 28.02%;
+    top: 33.33%;
+    left: 7.4%;
+    font-size: var(--font-size-10xl);
+    color: var(--color-dimgray-200);
+    display: inline-block;
+  }
+  .blackjack-component,
+  .blackjack-component1 {
+    position: absolute;
+    top: 964px;
+    left: 240px;
+    width: 960px;
+    height: 588px;
+  }
+  .blackjack-component1 {
+    top: 195px;
+  }
+  .desktop-1 {
+    position: relative;
+    background-color: var(--background-paper);
+    width: 100%;
+    height: 2644px;
+    text-align: left;
+    font-size: var(--font-size-2xl);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+  }
+  
