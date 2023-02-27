@@ -82,6 +82,10 @@ function minimizeNavBar() {
         document.getElementById("login-container-sm").style.display = "flex";
 
         document.getElementById("back-to-top-switch").style.display = "block";
+        
+        document.getElementById("index-banner").style.backgroundSize = "45%";
+
+        document.getElementById("main-info-sugge").style.fontSize = "20px";
 
 
 
@@ -116,6 +120,11 @@ function minimizeNavBar() {
         var scrolled = (winScroll / height) * 100;
         document.getElementById("mybar").style.width = scrolled + "%";
         document.getElementById("prog-container").style.zIndex = "50";
+
+        document.getElementById("index-banner").style.backgroundSize = "60%";
+
+        document.getElementById("main-info-sugge").style.fontSize = "16px";
+
     }
 }
 // ============================NAV-BAR-ONSCROLL-END=============================*/  

@@ -665,7 +665,7 @@ body {
 }
 
 .page1 {
-    background-color: #000000d3;
+    background-color: #000000;
 }
 
 .page2 {
@@ -727,7 +727,7 @@ header #logo a {
 }
 
 .nav-menu a {
-    color: rgb(137, 155, 173);
+    color: #899bad;
     padding: 10px;
 }
 
@@ -797,7 +797,7 @@ main .index-banner {
     background-position: center;
     background-size: cover;
     display: table;
-    transition: 1s ease-in;
+    transition: 0.5s;
 }
 
 .index-banner h2 {
@@ -817,15 +817,29 @@ main .index-banner {
     font-size: 18px;
     text-align: center;
     color: #f3f3f3;
-    text-shadow: 4px 4px 6px #000000;
+    text-shadow: 2px 2px 4px #000000;
     padding-top: 30px;
     margin: auto 80px;
     line-height: 22px;
 }
 
+
+.title-2 p {
+    font-family: sans-serif;
+    width: 850px;
+    margin: 0 auto;
+    transition: 1s;
+    color: lightsteelblue;
+}
+
 .vertical-center {
     display: table-cell;
     vertical-align: middle;
+}
+
+main .index-banner {
+    background-image: url(./Images/dark_laptop_compressed.jpg);
+    background-size: 60%;
 }
 
 .title-3 {
@@ -838,6 +852,8 @@ main .index-banner {
     text-align: center;
     margin: 0 auto;
 }
+
+
 
 /* google search box */
 .search-box {
@@ -1166,7 +1182,7 @@ footer #copyright {
     font-size: 22px;
     display: block;
     z-index: 100000;
-    color: skyblue;
+    color: lightsteelblue;
 }
 
 /* ====================ABOUT-ME-PAGE-SECTION================== */
@@ -1543,10 +1559,6 @@ footer #copyright {
         display: flex;
     }
 
-    main .index-banner {
-        background-image: url(./Images/amoled-colorful-sky-4433aeo37f19eqnt.jpg);
-    }
-
     #blog,
     #contacts {
         display: block;
@@ -1659,11 +1671,6 @@ footer #copyright {
         float: left;
     }
 
-    .title-2 p {
-        font-family: sans-serif;
-        width: 850px;
-        margin: 0 auto;
-    }
 
     .border-title {
         width: 800px;
@@ -1809,7 +1816,6 @@ footer #copyright {
     .all-elements .element-sq {
         width: 100%;
         height: 250px;
-        /* line-height: 250px; */
         width: 216px;
         margin: 16px;
     }

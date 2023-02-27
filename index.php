@@ -227,8 +227,8 @@
                         </div>
                         <div class="title-2">
                             <p id="main-info-sugge">
-                                Greetings and welcome <br />
-                                Welcome to my online portfolio
+                                Greetings and welcome
+                            </p>
                                 <div class="search-box">
                                     <form action="https://www.google.com/search" method="get">
                                         <input type="search" name="q" class="search-input" placeholder="Search anything"
@@ -236,7 +236,6 @@
                                         value="Google" /><i class='fas fa-search'></i>
                                     </form>
                                 </div>
-                            </p>
                         </div>
                     </div>
                 </section>
