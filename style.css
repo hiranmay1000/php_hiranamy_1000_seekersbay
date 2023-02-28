@@ -671,8 +671,7 @@ body {
 .page2 {
     scroll-snap-align: start;
     /* background-color: #000000d3; */
-    background-image: linear-gradient(to top, #7c3b3b, #2a608df3);
-}
+background-image: linear-gradient(to top, #662e2e, #246791fa);}
 
 /* website transition end*/
 
