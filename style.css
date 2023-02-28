@@ -2098,8 +2098,7 @@ footer #copyright {
 
 /* DESKTOP VERSION END */
 
-/* special case */
-
+/* special cases */
 @media only screen and (min-width: 1300px) {
 
     .myDottedFrotImg{
@@ -2107,7 +2106,7 @@ footer #copyright {
         background-repeat: no-repeat;
         background-position: center;
         background-size: 130%;
-        opacity: 0.2;
+        opacity: 0.1;
         height: 100vh;
         width: 100%;
         position: absolute;
