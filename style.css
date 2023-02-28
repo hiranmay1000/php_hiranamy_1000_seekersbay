@@ -731,6 +731,11 @@ header #logo a {
     padding: 10px;
 }
 
+.nav-menu a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 .login-container {
     width: 150px;
     height: 80px;
@@ -836,8 +841,6 @@ main .index-banner {
     vertical-align: middle;
 }
 
-
-
 .title-3 {
     /*Hello world*/
     font-family: sans-serif;
@@ -895,33 +898,69 @@ main .index-banner {
 }
 /* ...................... */
 
-/* 2nd-page-only-mobile-version */
 
-.all-elements {
-    margin: auto;
-    width: 100%;
-    height: 800px;
+/* 2nd-page projects section */
+.every-projects {
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+        "project1"
+        "project2"
+        "project3 "
+        "project4"
+        "project5 "
+        "all-projects";
+    grid-gap: 10px;
 }
 
-.all-elements a {
-    height: 120px;
-    margin: 12px;
+.every-projects a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.project {
+    background-color: #070707;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: #fff;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #021628;
-    border-radius: 6px;
 }
 
-.all-elements a:hover {
-    color: orange;
-    transition: 0.3s ease-in;
-    box-shadow: 0px 0px 14px rgba(31, 103, 212, 0.295);
-    text-decoration: none;
+#project1 {
+    grid-area: project1;
 }
+
+#project2 {
+    grid-area: project2;
+}
+
+#project3 {
+    grid-area: project3;
+}
+
+#project4 {
+    grid-area: project4;
+}
+
+#project5 {
+    grid-area: project5;
+}
+
+#all-projects {
+    grid-area: all-projects;
+    font-style: italic;
+    color: #fff;
+}
+
+#all-projects:hover {
+    color: orange;
+}
+/* ......end...... */
+
 
 .wrapper-paeg2 {
     width: 80%;
@@ -945,15 +984,6 @@ main .index-banner {
     text-align: center;
     color: #ffd8a2;
     font-size: 140%;
-}
-
-#see-all {
-    font-style: italic;
-    color: #00a7e9;
-}
-
-#see-all:hover {
-    color: orange;
 }
 
 /* MOBILE VERSION ................................... */
@@ -1554,7 +1584,6 @@ footer #copyright {
         display: flex;
     }
 
-
     #blog,
     #contacts {
         display: block;
@@ -1564,44 +1593,23 @@ footer #copyright {
         width: 500px;
     }
 
-    /* all elements */
-
-    .all-elements {
-        width: 700px;
-    }
-
-    .element-container {
-        border-radius: 5px;
-        background: rgb(233, 235, 237, 0.5);
-    }
-
-    .all-elements-box {
-        padding-top: 80px;
-    }
-
-    .all-elements a {
-        width: 190px;
-        height: 250px;
-        line-height: 250px;
-    }
-
-    .all-elements div {
-        margin: 22px;
-        float: left;
-    }
-
-    .all-elements .element-sq {
-        margin: 0px;
-        padding: 0;
-        width: 200px;
-    }
-
-    .all-elements .element-rec {
-        margin: 0;
-        padding: 0;
-        width: 200px;
-    }
     
+    /* every-prjects */
+    .every-projects {
+        height: 500px;
+        width: 700px;
+        background-color: #555454;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "project1 project2 project2 project3"
+            "project4 project4 project5 all-projects";
+    }
+
+    .page2{
+        padding-top: 150px;
+    }
+
     /* -------------------------PAGE1----------------------------*/
 
     /* -------------------------PAGE1-END----------------------------*/
@@ -1796,43 +1804,11 @@ footer #copyright {
         border-radius: 30px;
     }
 
-    /* all elements */
-    .all-elements a {
-        width: 100%;
-        margin: 0;
-        padding: 0;
+    /* every project section */
+    .every-projects {
+        width: 1000px;
     }
-
-    .all-elements {
-        width: 1040px;
-    }
-
-    .element-container {
-        padding: 10px;
-    }
-
-    .all-elements .element-sq {
-        width: 100%;
-        height: 250px;
-        width: 216px;
-        margin: 16px;
-    }
-
-    .all-elements .element-rec {
-        margin: 16px;
-        width: 440px;
-    }
-
-    .all-elements div {
-        margin: 12px;
-        float: left;
-    }
-
-    .wrapper-paeg2 {
-        width: 70%;
-    }
-
-    /* .all-elements-end */
+    /* every project section end */
 
     /* hello-world */
     .hello-world {
@@ -2101,9 +2077,8 @@ footer #copyright {
 
 /* special cases */
 @media only screen and (min-width: 1300px) {
-
-    .myDottedFrotImg{
-        background-image: url(./Images/dotted-black.jpg );
+    .myDottedFrotImg {
+        background-image: url(./Images/dotted-black.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 130%;

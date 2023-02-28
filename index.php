@@ -245,52 +245,43 @@
 
             <!-- ------------------------PAGE-2-------------------------- -->
             <div class="page2">
-                <section class="all-elements" id="section2">
-                    <div class="all-elements-box">
-                        <div class="element-container">
-                            <div class="element-sq">
-                                <a href="">
-                                    <h3 class="element-title">CHROME EXT</h3>
-                                </a>
-                            </div>
-                            <div class="element-rec">
-                                <a href="./self-driving-car-simulation/index.php">
-                                    <h3 class="element-title">
-                                        SELF DRIVING SIMULATION
-                                    </h3>
-                                </a>
-                            </div>
-                            <div class="element-sq">
-                                <a href="./personality-api/personality-api.php">
-                                    <h3 class="element-title">
-                                        PERSONALITY API
-                                    </h3>
-                                </a>
-                            </div>
-                            <div class="element-rec">
-                                <a href="./BlackJack_game/blackjack.php">
-                                    <h3 class="element-title">
-                                        BLACKJACK GAME
-                                    </h3>
-                                </a>
-                            </div>
-                            <div class="element-sq">
-                                <a href="achivement-page  page-template">
-                                    <h3 class="element-title">
-                                        ACHEIVEMENTS
-                                    </h3>
-                                </a>
-                            </div>
-                            <div class="element-sq">
-                                <a id="see-all" href="./sub-pages/projects.php">
-                                    <h3 class="element-title">
-                                        <em>SEE ALL</em>
-                                    </h3>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
+
+
+                <section class="every-projects" id="section2">
+                    <a class="project" id="project1" href="#">
+                        <h5 class="element-title">CHROME EXT</h5>
+                    </a>
+                    <a class="project" id="project2" href="./self-driving-car-simulation/index.php">
+                        <h5 class="element-title">
+                            SELF DRIVING SIMULATION
+                        </h5>
+                    </a>
+                    <a class="project" id="project3" href="#">
+                        <h5 class="element-title">
+                            CRUD APP
+                        </h5>
+                    </a>
+                    <a class="project" id="project4" href="./BlackJack_game/blackjack.php">
+                        <h5 class="element-title">
+                            BLACKJACK GAME
+                        </h5>
+                    </a>
+                    <a class="project" id="project5" href="achivement-page  page-template">
+                        <h5 class="element-title">
+                            ACHEIVEMENTS
+                        </h5>
+                    </a>
+                    <a class="project" id="all-projects" id="see-all" href="./sub-pages/projects.php">
+                        <h5 class="element-title">
+                            <em>SEE ALL</em>
+                        </h5>
+                    </a>
+
                 </section>
+
+
+
                 <div class="wrapper-paeg2">
                     <h3>Greetings and welcome</h3>
                     <p>Welcome to my online portfolio! As a beginner software engineer, I'm thrilled to share with you
@@ -326,12 +317,9 @@
                     <div class="vertical-center">
                         <h3>Creations</h3>
                         <p>
-                            To see my latest projects and updates please
-                            visit
-                            <a id="projects-html-page" href="./Projects-page/projects.php">project
-                            </a>
-                            section and also check out my latest
-                            <a href="blogs">blogs</a>. Feel free to explore and get in touch if you have any questions
+                            To see my latest projects and updates please visit<a id="projects-html-page"
+                                href="./Projects-page/projects.php">project</a>section and also check out my latest<a
+                                href="blogs">blogs</a>. Feel free to explore and get in touch if you have any questions
                             or opportunities to collaborate. Let's build something great together!
                         </p>
                         <br />
@@ -341,17 +329,11 @@
                                     style="text-decoration: underline">about me</a></span>
                             section
                         </p>
-                        <br />
-                        <p>
-                            For more queries
-                            <a href="/sub-pages/contact.php">
-                                contact me</a>
-                            .
-                        </p>
-
+                        <p>For more queries<a href="/sub-pages/contact.php">contact me</a>.</p>
                         <br />
                         <p id="github-code-link">
-                            <a href="https://github.com/hiranmay1000/personal-web" target="_blank">Code for this website
+                            <a href="https://github.com/hiranmay1000/personal_portfolio_php_web" target="_blank">Code
+                                for this website
                                 <img class="hyperlink-logo" src="./Images/Logoes/hyperlink.png"
                                     alt="hyperlink logo" /></a>
                         </p>

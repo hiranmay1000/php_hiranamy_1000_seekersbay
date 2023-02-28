@@ -170,6 +170,6 @@ jQuery(function ($) {
 setTimeout(() => {
     document.getElementById("myDottedFrotImg").style.backgroundSize = "145%";
     document.getElementById("index-banner").style.backgroundSize = "60%";
-}, 1000);
+}, 500);
 
 
