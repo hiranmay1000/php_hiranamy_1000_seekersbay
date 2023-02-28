@@ -250,9 +250,7 @@
                         <div class="element-container">
                             <div class="element-sq">
                                 <a href="">
-                                    <h3 class="element-title">
-                                        CHROME EXT
-                                    </h3>
+                                    <h3 class="element-title">CHROME EXT</h3>
                                 </a>
                             </div>
                             <div class="element-rec">
