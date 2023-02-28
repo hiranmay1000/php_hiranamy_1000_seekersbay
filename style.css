@@ -665,7 +665,7 @@ body {
 }
 
 .page1 {
-    background-color: #000000;
+    background-color: rgb(1, 1, 1);
 }
 
 .page2 {
@@ -793,9 +793,10 @@ header #logo a {
 main .index-banner {
     width: 100%;
     height: calc(100vh);
+    background-image: url(./Images/dark_laptop_compressed.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 56%;
     display: table;
     transition: 0.5s;
 }
@@ -836,10 +837,6 @@ main .index-banner {
 }
 
 
-main .index-banner {
-    background-image: url(./Images/dark_laptop_compressed.jpg);
-    background-size: 60%;
-}
 
 .title-3 {
     /*Hello world*/
@@ -2100,3 +2097,20 @@ footer #copyright {
 }
 
 /* DESKTOP VERSION END */
+
+/* special case */
+
+@media only screen and (min-width: 1300px) {
+
+    .myDottedFrotImg{
+        background-image: url(./Images/dotted-black.jpg );
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 130%;
+        opacity: 0.2;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        transition: 1.5s;
+    }
+}

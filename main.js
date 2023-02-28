@@ -83,10 +83,11 @@ function minimizeNavBar() {
 
         document.getElementById("back-to-top-switch").style.display = "block";
         
-        document.getElementById("index-banner").style.backgroundSize = "40%";
-
         document.getElementById("main-info-sugge").style.fontSize = "20px";
-
+        
+        document.getElementById("index-banner").style.backgroundSize = "40%";
+        
+        document.getElementById("myDottedFrotImg").style.backgroundSize = "130%";
 
 
 
@@ -121,9 +122,12 @@ function minimizeNavBar() {
         document.getElementById("mybar").style.width = scrolled + "%";
         document.getElementById("prog-container").style.zIndex = "50";
 
+        document.getElementById("main-info-sugge").style.fontSize = "16px";
+        
         document.getElementById("index-banner").style.backgroundSize = "60%";
 
-        document.getElementById("main-info-sugge").style.fontSize = "16px";
+        document.getElementById("myDottedFrotImg").style.backgroundSize = "145%";
+
 
     }
 }
@@ -161,5 +165,11 @@ jQuery(function ($) {
     });
 
 });
+
+
+setTimeout(() => {
+    document.getElementById("myDottedFrotImg").style.backgroundSize = "145%";
+    document.getElementById("index-banner").style.backgroundSize = "60%";
+}, 1000);
 
 

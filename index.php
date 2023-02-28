@@ -206,6 +206,7 @@
             <div class="page1" id="section1">
 
                 <section class="index-banner" id="index-banner">
+                    <div class="myDottedFrotImg" id="myDottedFrotImg"></div>
                     <div class="r_box">
                         <?php require('partials/_show_date_time.php') ?>
                     </div>
