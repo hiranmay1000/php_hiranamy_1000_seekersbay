@@ -671,8 +671,8 @@ body {
 .page2 {
     scroll-snap-align: start;
     /* background-color: #000000d3; */
-background-image: linear-gradient(to top, #662e2e, #246791fa);}
-
+    background-image: linear-gradient(to top, #632f2f, #2e5066fa, #246791f6);
+}
 /* website transition end*/
 
 /* HEADER */
@@ -801,7 +801,8 @@ main .index-banner {
     background-image: url(./Images/dark_laptop_compressed.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 56%;
+    /* background-size: 56%; */
+    background-size: 70%;
     display: table;
     transition: 0.5s;
 }
@@ -898,7 +899,6 @@ main .index-banner {
 }
 /* ...................... */
 
-
 /* 2nd-page projects section */
 .every-projects {
     height: 100vh;
@@ -917,7 +917,7 @@ main .index-banner {
     grid-gap: 10px;
 }
 
-.every-projects a:hover{
+.every-projects a:hover {
     text-decoration: none;
     color: #fff;
 }
@@ -960,7 +960,6 @@ main .index-banner {
     color: orange;
 }
 /* ......end...... */
-
 
 .wrapper-paeg2 {
     width: 80%;
@@ -1593,7 +1592,6 @@ footer #copyright {
         width: 500px;
     }
 
-    
     /* every-prjects */
     .every-projects {
         height: 500px;
@@ -1606,7 +1604,7 @@ footer #copyright {
             "project4 project4 project5 all-projects";
     }
 
-    .page2{
+    .page2 {
         padding-top: 150px;
     }
 
@@ -2081,7 +2079,7 @@ footer #copyright {
         background-image: url(./Images/dotted-black.jpg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 130%;
+        background-size: 160%;
         opacity: 0.15;
         height: 100vh;
         width: 100%;
