@@ -257,7 +257,7 @@
                             SELF DRIVING SIMULATION
                         </h5>
                     </a>
-                    <a class="project" id="project3" href="#">
+                    <a class="project" id="project3" href="sub-pages/myprojects/crud-app/index.php">
                         <h5 class="element-title">
                             CRUD APP
                         </h5>
@@ -341,9 +341,7 @@
                 </section>
             </div>
             <!------------------------ PAGE-4-END ------------------------->
-
-
-
+            
             <!------------------------ NEWSLETTER ------------------------->
             <?php require('partials/_subscription.php') ?>
             <!------------------------ NEWSLETTER-END ------------------------->
