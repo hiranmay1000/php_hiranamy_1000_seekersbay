@@ -154,7 +154,7 @@ if (isset($_POST['slnoEdit'])) { // to edit perticualt data
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/myprojects/crud-app/index.php" method="post">
+                    <form action="/sub-pages/myprojects/crud-app/index.php" method="post">
                         <input type="hidden" id="slnoEdit" name='slnoEdit'>
                         <div class="form-group">
                             <label for="modalTitle">Title</label>
@@ -181,8 +181,9 @@ if (isset($_POST['slnoEdit'])) { // to edit perticualt data
     <div class="wrapper">
         <div class="content">
             <div class="input-area">
+                <h2 class="main-heading">CRUD (Create, Read, Update, Delete) Application</h2>
                 <h2 style="color:white;">Add Note</h2>
-                <form action="/myprojects/crud-app/index.php" method="post">
+                <form action="/sub-pages/myprojects/crud-app/index.php" method="post">
                     <div class="form-group">
                         <label for="noteTitle">Heading</label>
                         <input type="text" class="form-control" id="noteTitle" name="noteTitle" placeholder="Title">
@@ -194,6 +195,7 @@ if (isset($_POST['slnoEdit'])) { // to edit perticualt data
                         <small id="client-disclaimer" class="form-text text-muted" style="color:grey !important;">We'll
                             never share your information with anyone else.</small>
                     </div>
+                    echo "Done";
                     <button type="submit" class="btn btn-primary" name="insert_crud_data">Create</button>
                 </form>
             </div>
@@ -258,7 +260,7 @@ if (isset($_POST['slnoEdit'])) { // to edit perticualt data
                             <tr style='border: 1px solid #3b3b3b'>
                             <th scope='row'>$sno.</th>
                             <td>" . $rowData['title'] . "</td>
-                            <td>" . $rowData['desc'] . "</td>
+                            <td>" . $rowData['desc_'] . "</td>
                             <td class='dt-center'> 
                                 <button class='btn-group mr-2 edit btn btn-sm btn-primary ' id=" . $rowData['slno'] . "  data-bs-toggle='modal' data-bs-target='#editModal' >Edit</button>
                                 <button class=' del btn btn-sm btn-secondary' id=" . $rowData['slno'] . " >Delete</button>
