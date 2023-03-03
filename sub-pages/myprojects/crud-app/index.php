@@ -154,7 +154,7 @@ if (isset($_POST['slnoEdit'])) { // to edit perticualt data
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/sub-pages/myprojects/crud-app/index.php" method="post">
+                    <form action="" method="post">
                         <input type="hidden" id="slnoEdit" name='slnoEdit'>
                         <div class="form-group">
                             <label for="modalTitle">Title</label>
@@ -181,9 +181,10 @@ if (isset($_POST['slnoEdit'])) { // to edit perticualt data
     <div class="wrapper">
         <div class="content">
             <div class="input-area">
-                <h2 class="main-heading">CRUD (Create, Read, Update, Delete) Application</h2>
-                <h2 style="color:white;">Add Note</h2>
-                <form action="/sub-pages/myprojects/crud-app/index.php" method="post">
+                <h1 class="main-heading">CRUD APPLICATION - (Create, Read, Update & Delete) </h3>
+                <hr>
+                <h2 class="mt-5" style="color:white;">Add Note</h2>
+                <form action="" method="post">
                     <div class="form-group">
                         <label for="noteTitle">Heading</label>
                         <input type="text" class="form-control" id="noteTitle" name="noteTitle" placeholder="Title">
@@ -195,7 +196,6 @@ if (isset($_POST['slnoEdit'])) { // to edit perticualt data
                         <small id="client-disclaimer" class="form-text text-muted" style="color:grey !important;">We'll
                             never share your information with anyone else.</small>
                     </div>
-                    echo "Done";
                     <button type="submit" class="btn btn-primary" name="insert_crud_data">Create</button>
                 </form>
             </div>

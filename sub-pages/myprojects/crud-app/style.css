@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-body{
-    background-image: url(Images/bg-img/data_illustration.jpg);    
+body {
+    background-image: url(Images/bg-img/data_illustration.jpg);
     background-size: cover;
 }
 
@@ -40,13 +40,17 @@ body{
     color: #75a5ff !important;
 }
 
+.main-heading    {
+    text-align: center;
+}
+
 /* For desktop version */
 @media only screen and (min-width: 1080px) {
     .wrapper {
         width: 85%;
     }
 
-    .content{
+    .content {
         width: 90%;
     }
 }
