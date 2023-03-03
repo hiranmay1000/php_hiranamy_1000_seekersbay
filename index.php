@@ -87,7 +87,7 @@
                     function hideFeedback(){
                         document.getElementById('$id').style.display = 'none';
                     }
-                    setInterval(hideFeedback, 500000);
+                    setInterval(hideFeedback, 5000);
                 </script>
                 ";
 
