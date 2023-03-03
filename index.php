@@ -20,9 +20,17 @@
         document.addEventListener("touchmove", function (event) {
             event.preventDefault();
         })
+
+        setInterval(() => {
+            document.title = "Hiranmay's";
+        }, 1500);
+        setInterval(() => {
+            document.title = "Portfolio website";
+        }, 3000);
+
     </script>
 
-    <title>Portfolio web</title>
+    <title id="landingPage-title">Portfolio web</title>
 </head>
 
 <body id="section1">
@@ -100,7 +108,7 @@
         </script>";
 
         if ($isFound) {
-            showFeedback('loggedin-success', "Welcome [$username] - You have been logged in successfully");
+            showFeedback('loggedin-success', "Welcome $username - You have been logged in successfully");
         } else if ($isReg) {
             showFeedback('loggedin-success', 'Your account has been created successfully and you are logged in');
         } else if ($isUnmatched) {
