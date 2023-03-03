@@ -54,7 +54,7 @@ Array.from(deletes).forEach(element => {
         snoDel = e.target.id;
         console.log(snoDel);
 
-        window.location = "/myprojects/crud-app/index.php?delete=" + snoDel;
+        window.location = "sub-pages/myprojects/crud-app/index.php?delete=" + snoDel;
     })
 })
 
@@ -66,5 +66,5 @@ mainDelBtn.addEventListener("click", function () { });
 
 var deleteAllBtn = document.getElementById('modalWarnBtn');
 deleteAllBtn.addEventListener('click', function () {
-    window.location = "/myprojects/crud-app/index.php?delete_all=" + true;
+    window.location = "sub-pages/myprojects/crud-app/index.php?delete_all=" + true;
 })
