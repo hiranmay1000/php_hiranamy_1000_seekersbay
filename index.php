@@ -54,31 +54,32 @@
         function showFeedback($type, $message)
         {
             $id = $type . '-feedback';
-            $class = 'alert';
+            $class = 'alert myalert';
             $icon = '';
 
             switch ($type) {
                 case 'loggedin-success':
-                    $class .= ' alert-success';
                     $icon = '✅';
+                    $class .= ' alert-success';
                     break;
                 case 'unmatched':
+                case 'incorrect-comb':
                     $class .= ' alert-danger';
                     break;
                 case 'not-avail':
-                case 'incorrect-comb':
                 case 'new':
-                case 'logged-out':
-                    $class .= ' alert-warning';
                     $icon = '❌';
+                    $class .= ' alert-warning';
                     break;
+                case 'logged-out':
+                    $class .= ' alert-primary';
             }
 
 
             echo "
                 <div id='$id' class='$class align-items-center my-0' role='alert'>
                     <div>
-                        <strong>$message $icon</strong>
+                        <strong>$icon $message</strong>
                     </div>
                 </div>
 
@@ -86,7 +87,7 @@
                     function hideFeedback(){
                         document.getElementById('$id').style.display = 'none';
                     }
-                    setInterval(hideFeedback, 5000);
+                    setInterval(hideFeedback, 500000);
                 </script>
                 ";
 
@@ -341,7 +342,7 @@
                 </section>
             </div>
             <!------------------------ PAGE-4-END ------------------------->
-            
+
             <!------------------------ NEWSLETTER ------------------------->
             <?php require('partials/_subscription.php') ?>
             <!------------------------ NEWSLETTER-END ------------------------->

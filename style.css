@@ -736,6 +736,21 @@ header #logo a {
     text-decoration: none;
 }
 
+.myalert{
+    position: fixed !important;
+    top: 100px;
+    right: 0%;
+    border: none;
+    border-radius: 12px !important;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
+    float: right;
+    transition: 1s ease-out;
+    z-index: 100;
+}
+
 .login-container {
     width: 150px;
     height: 80px;

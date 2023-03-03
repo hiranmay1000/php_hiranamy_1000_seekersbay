@@ -76,7 +76,7 @@ if (isset($_POST['slnoEdit'])) { // to edit perticualt data
     $sql = "TRUNCATE TABLE crud_data";
 
     if ($connection->query($sql) === false) {
-        echo "Error deleting data: " . $connection->error();
+        echo "Error deleting data: " . mysqli_error($connection);
     } else {
         $isDelAll = true;
     }
@@ -213,7 +213,7 @@ if (isset($_POST['slnoEdit'])) { // to edit perticualt data
                 } else if ($isEdited) {
                     echo "<p id='save_feedback' style=' color: orange; font-size:15px; display:block; ' >Changed successfully</p>";
                     echo "  <script>
-                                function hideFeedbackModal(){
+                                function hideFeedfbackModal(){
                                         document.getElementById('save_feedback').style.display = 'none';
                                         return;
                                     }setInterval('hideFeedbackModal()', 3000);
@@ -274,7 +274,7 @@ if (isset($_POST['slnoEdit'])) { // to edit perticualt data
                 </table>
                 <hr>
                 <!-- <button type="submit" name="delete_all" class=" btn btn-danger" id="myButton" data-bs-target='#confirmationModal'>Delete All</button> -->
-                <button type="submitt" name="delete_all" class="btn btn-danger" id="myButton" data-bs-toggle="modal"
+                <button type="submit" name="delete_all" class="btn btn-danger" id="myButton" data-bs-toggle="modal"
                     data-bs-target="#confirmationModal">DELETE ALL</button>
             </div>
         </div>
