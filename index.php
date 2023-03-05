@@ -259,7 +259,7 @@
 
                 <section class="every-projects" id="section2">
                     <a class="project" id="project1" href="./sub-pages/myprojects/text-converter/index.html">
-                        <h5 class="element-title">CHROME EXT</h5>
+                        <h5 class="element-title" >TEXT CONVERTER</h5>
                     </a>
                     <a class="project" id="project2"
                         href="./sub-pages/myprojects/self-driving-car-simulation/index.html">
@@ -354,8 +354,6 @@
             <!------------------------ NEWSLETTER ------------------------->
             <?php require('partials/_subscription.php') ?>
             <!------------------------ NEWSLETTER-END ------------------------->
-
-
 
         </main>
         <?php require('partials/_footer_blue.php') ?>

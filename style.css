@@ -931,6 +931,7 @@ main .index-banner {
         "project5 "
         "all-projects";
     grid-gap: 10px;
+    text-align: center;
 }
 
 .every-projects a:hover {
@@ -944,6 +945,10 @@ main .index-banner {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.project h5{
+    width: 70%;
 }
 
 #project1 {
