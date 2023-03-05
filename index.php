@@ -258,10 +258,11 @@
 
 
                 <section class="every-projects" id="section2">
-                    <a class="project" id="project1" href="#">
+                    <a class="project" id="project1" href="./sub-pages/myprojects/text-converter/index.html">
                         <h5 class="element-title">CHROME EXT</h5>
                     </a>
-                    <a class="project" id="project2" href="./self-driving-car-simulation/index.php">
+                    <a class="project" id="project2"
+                        href="./sub-pages/myprojects/self-driving-car-simulation/index.html">
                         <h5 class="element-title">
                             SELF DRIVING SIMULATION
                         </h5>
@@ -342,8 +343,7 @@
                         <br />
                         <p id="github-code-link">
                             <a href="https://github.com/hiranmay1000/personal_portfolio_php_web" target="_blank">Code
-                                for this website
-                                <img class="hyperlink-logo" src="./Images/Logoes/hyperlink.png"
+                                for this website<img class="hyperlink-logo" src="./Images/Logoes/hyperlink.png"
                                     alt="hyperlink logo" /></a>
                         </p>
                     </div>
