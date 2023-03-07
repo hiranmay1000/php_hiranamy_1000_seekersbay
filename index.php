@@ -258,8 +258,8 @@
 
 
                 <section class="every-projects" id="section2">
-                    <a class="project" id="project1" href="./sub-pages/myprojects/text-converter/index.html">
-                        <h5 class="element-title" >TEXT CONVERTER</h5>
+                    <a class="project" id="project1" target="blank" href="https://seekerbays.vercel.app">
+                        <h5 class="element-title">BLOG WEB</h5>
                     </a>
                     <a class="project" id="project2"
                         href="./sub-pages/myprojects/self-driving-car-simulation/index.html">
@@ -350,6 +350,7 @@
                 </section>
             </div>
             <!------------------------ PAGE-4-END ------------------------->
+            <?php include_once("build/index.html"); ?>
 
             <!------------------------ NEWSLETTER ------------------------->
             <?php require('partials/_subscription.php') ?>
