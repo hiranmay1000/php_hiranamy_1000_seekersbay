@@ -18,7 +18,7 @@
                 <a href="shorturl.at/mpLNQ">Resume</a>
                 <a href="./sub-pages/aboutme.php">About me</a>
                 <a href="./sub-pages/projects.php">Projetcs</a>
-                <a href="">Blog</a>
+                <a href="https://seekerbays.vercel.app/">Blog</a>
             </ul>
         </nav>
     </div>
